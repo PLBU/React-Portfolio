@@ -1,0 +1,37 @@
+ul{
+   list-style: none;
+   overflow: visible;
+   width: 50px;
+   height: 100%;
+}
+
+li{
+   float: right;
+   padding: 15px;
+   background-color: white;
+   box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.1);
+   text-decoration: none;
+   justify-content: center;
+   border-radius: 15px 0px 0px 15px;
+   transform: scale(1);
+   transition: 0.15s all ease;
+}
+
+li:hover, li:focus{
+   transform: scale(1.2);
+   padding: 18px;
+}
+
+.icons {
+   color: black;
+   width: 20px;
+   height: 20px;
+}
+
+/*Responsive design for mobile website*/
+@media only screen and (max-width: 530px){
+   .icons {
+      width: 18px;
+      height: 18px;
+   }
+}

@@ -1,0 +1,63 @@
+h1 {
+   font-size: 72px;
+   font-weight: bolder;
+   margin: 5px 0;
+}
+
+h2 {
+   color: grey;
+   margin: 30px 0;
+}
+
+p{
+   font-size: large;
+   color: grey;
+   text-align: justify;
+}
+
+.container {
+   display: flex;
+   height: 100vh;
+   align-items: center;
+   margin: 0 85px;
+}
+
+#about{
+   display: flex;
+}
+
+.content-left{
+   flex: 35%;
+}
+
+.content-right{
+   flex: 65%;
+}
+
+/*Responsive design for mobile website*/
+@media only screen and (max-width: 530px){
+   h1{
+      font-size: 40px;
+   }
+
+   h2 {
+      font-size: 18px;
+   }
+
+   p {
+      font-size: medium;
+   }
+
+   .intro{
+      font-size: 36px;
+   }
+
+   .container{
+      margin-left: 20px;
+      margin-right: 70px;
+   }
+
+   #about{
+      display: block;
+   }
+}
