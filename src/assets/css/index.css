@@ -1,11 +1,11 @@
 @font-face {
-  font-family: poppins;
-  src: url(../fonts/Poppins-Regular.ttf);
+  font-family: ubuntu;
+  src: url(../fonts/Ubuntu-Regular.ttf);
 }
 
 body {
   position: absolute;
-  font-family: 'Ubuntu';
+  font-family: ubuntu;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
