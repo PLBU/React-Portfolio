@@ -1,3 +1,11 @@
+.title {
+   position: absolute;
+   top: 0;
+   left: 0;
+   margin: 25px;
+   margin-left: 85px !important;
+}
+
 h1 {
    font-size: 72px;
    font-weight: bolder;
@@ -28,10 +36,19 @@ p{
 
 .content-left{
    flex: 35%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 .content-right{
    flex: 65%;
+   display: flex;
+   align-items: center;
+}
+
+img {
+   width: 360px;
 }
 
 /*Responsive design for mobile website*/
@@ -57,7 +74,15 @@ p{
       margin-right: 70px;
    }
 
+   .title {
+      margin-left: 20px !important;
+   }
+
    #about{
       display: block;
+   }
+
+   img {
+      width: 240px;
    }
 }

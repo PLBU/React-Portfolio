@@ -1,14 +1,43 @@
-import React from 'react';
+import React, {useRef} from 'react';
+import {useChain, useSpring, animated} from 'react-spring'
 
 import picabout from '../images/pic-about.png'
 
-const about = () => (
+function About(){
+  const fadeDownRef = useRef()
+  const fadeDown = useSpring({
+    from: {opacity: 0, marginTop: -75},
+    to: {opacity: 1, marginTop: 25},
+    ref: fadeDownRef
+   })
+
+  const fadeRef = useRef()
+  const fade = useSpring({
+    from: {opacity: 0},
+    to: {opacity: 1},
+    config: {duration: 500},
+    ref: fadeRef
+  })
+
+  const fadeRef2 = useRef()
+  const fade2 = useSpring({
+    from: {opacity: 0},
+    to: {opacity: 1},
+    config: {duration: 500},
+    ref: fadeRef2
+  })
+
+  useChain([fadeDownRef, fadeRef, fadeRef2] )
+
+  return(
   <div className="container">
     <div>
-      <h1>About me</h1>
+      <animated.h1 style={fadeDown} className="title">About me</animated.h1>
       <div id="about">
-        <img src={picabout} alt="" width="256px" className="content-left"/>
-        <div className="content-right">
+        <animated.div style={fade} className="content-left">
+          <img src={picabout} alt=""/>
+        </animated.div>
+        <animated.div style={fade2} className="content-right">
           <p>
             An enthusiast in iOS/Android/Web app development based in Bandung and Jakarta. 
             Always seeking challenges that provide opportunities to maximize potential.
@@ -16,10 +45,11 @@ const about = () => (
             Institute of Technology. At present, holding a position in IEEE ITB Student Branch as the Back-end Developer.
             Looking forward to collaborating with you!
           </p>
-        </div>
+        </animated.div>
       </div>
     </div>
   </div>
-);
+  )
+};
 
-export default about;
+export default About;
