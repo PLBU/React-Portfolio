@@ -1,9 +1,38 @@
-import React from 'react';
+import React, {useRef} from 'react';
+import {useChain, useSpring, useTrail, animated} from 'react-spring'
 
-const skills = () => (
-  <div>
-    <h2>Mah skills</h2>
-  </div>
-);
+import items from '../components/SkillsList'
 
-export default skills;
+function Skills() {
+  const trailRef = useRef()
+  const trail = useTrail(items.length, {
+    from: {opacity: 0, background: 'lightgrey', transform: `scale(0.5)`},
+    to: {opacity: 1, background: `white`, transform: `scale(1)`},
+    ref: trailRef
+  })
+
+  const fadeDownRef = useRef()
+  const fadeDown = useSpring({
+    from: {opacity: 0, marginTop: -75},
+    to: {opacity: 1, marginTop: 35},
+    ref: fadeDownRef
+   })
+
+  useChain([fadeDownRef, trailRef] )
+
+  return(
+  <div className="container">
+    <div style={{marginTop: '16px'}}>
+      <animated.h1 style={fadeDown} className="title">My Skills</animated.h1>
+      <div id="skills">
+        {trail.map( (props, index) => (
+          <animated.div style={props} key={items[index]} className="skills-content">
+            {items[index]}
+          </animated.div>
+        ))}
+      </div>
+    </div>
+  </div>)
+}
+
+export default Skills;

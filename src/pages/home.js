@@ -29,7 +29,7 @@ function Home() {
   useChain([fadeDownRef, fadeDown2Ref, fadeRef] )
 
   return (<div className="container">
-    <div className="text-margin-right">
+    <div>
       <animated.h1 style={fadeDown}>Hi!</animated.h1>
       <animated.h1 style={fadeDown2} className="intro">I'm Renaldi Arlin</animated.h1>
       <animated.h2 style={fade}>Junior iOS/ Android/ Web App Developer</animated.h2>

@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import { Preloader, Puff } from 'react-preloader-icon';
+import { IconContext } from 'react-icons'
+import { FaLinkedin, FaInstagramSquare, FaGithubSquare } from "react-icons/fa";
 
 import '../assets/css/app.css';
 
@@ -64,7 +66,30 @@ export default class App extends Component{
             </Switch>
           </div>
           <Nav/>
-          <footer>&copy;Renaldi Arlin 2020</footer>
+          <footer>
+            <div className="footer-wrapper">
+              <div className="footer-content">
+                <a href="https://www.instagram.com/renaldiarlin/" rel="noopener noreferrer" target="_blank">
+                  <IconContext.Provider value={{className: 'footer-icons'}}>
+                    <FaInstagramSquare/>
+                  </IconContext.Provider>
+                </a>
+                <a href="https://github.com/PLBU" rel="noopener noreferrer" target="_blank">
+                  <IconContext.Provider value={{className: 'footer-icons'}}>
+                    <FaGithubSquare/>
+                  </IconContext.Provider>
+                </a>
+                <a href="https://www.linkedin.com/in/renaldi-arlin-034845192/" rel="noopener noreferrer" target="_blank">
+                  <IconContext.Provider value={{className: 'footer-icons'}}>
+                    <FaLinkedin/>
+                  </IconContext.Provider>
+                </a>
+              </div>
+              <div className="footer-content">
+                &copy;Renaldi Arlin 2020
+              </div>
+            </div>
+          </footer>
         </Router>
       )
     }

@@ -7,7 +7,7 @@ function About(){
   const fadeDownRef = useRef()
   const fadeDown = useSpring({
     from: {opacity: 0, marginTop: -75},
-    to: {opacity: 1, marginTop: 25},
+    to: {opacity: 1, marginTop: 35},
     ref: fadeDownRef
    })
 
@@ -35,7 +35,7 @@ function About(){
       <animated.h1 style={fadeDown} className="title">About me</animated.h1>
       <div id="about">
         <animated.div style={fade} className="content-left">
-          <img src={picabout} alt=""/>
+          <img src={picabout} alt="" className="about-img"/>
         </animated.div>
         <animated.div style={fade2} className="content-right">
           <p>

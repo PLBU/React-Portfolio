@@ -2,7 +2,6 @@
    position: absolute;
    top: 0;
    left: 0;
-   margin: 25px;
    margin-left: 85px !important;
 }
 
@@ -27,7 +26,8 @@ p{
    display: flex;
    height: 100vh;
    align-items: center;
-   margin: 0 85px;
+   margin-left: 85px;
+   margin-right: 150px;
 }
 
 #about{
@@ -47,7 +47,36 @@ p{
    align-items: center;
 }
 
-img {
+.skills-content{
+   box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.1);
+   border-radius: 10px;
+   display: inline-flex;
+   width: 100px;
+   height: 100px;
+   margin: 12px;
+   align-items: center;
+   justify-content: center;
+}
+
+.skills-content div{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.skills-content p{
+   text-align: center;
+   font-size: small;
+}
+
+.skills-icons{
+   margin-bottom: 4px;
+   width: 32px;
+   height: 32px;
+}
+
+.about-img {
    width: 360px;
 }
 
@@ -82,7 +111,22 @@ img {
       display: block;
    }
 
-   img {
+   .about-img {
       width: 240px;
+   }
+
+   .skills-content{
+      width: 64px;
+      height: 64px;
+      margin: 10px;
+   }
+
+   .skills-icons{
+      width: 24px;
+      height: 24px;
+   }
+
+   .skills-content p{
+      font-size: x-small;
    }
 }
