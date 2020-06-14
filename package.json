@@ -10,6 +10,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-external-link": "^1.1.1",
+    "react-helmet": "^6.1.0",
     "react-icons": "^3.10.0",
     "react-preloader-icon": "^1.0.0",
     "react-router": "^5.2.0",
