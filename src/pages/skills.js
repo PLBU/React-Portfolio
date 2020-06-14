@@ -6,8 +6,8 @@ import items from '../components/SkillsList'
 function Skills() {
   const trailRef = useRef()
   const trail = useTrail(items.length, {
-    from: {opacity: 0, background: 'lightgrey', transform: `scale(0.5)`},
-    to: {opacity: 1, background: `white`, transform: `scale(1)`},
+    from: {opacity: 0, background: 'lightgrey'},
+    to: {opacity: 1, background: `white`},
     ref: trailRef
   })
 
@@ -22,7 +22,7 @@ function Skills() {
 
   return(
   <div className="container">
-    <div style={{marginTop: '16px'}}>
+    <div>
       <animated.h1 style={fadeDown} className="title">My Skills</animated.h1>
       <div id="skills">
         {trail.map( (props, index) => (

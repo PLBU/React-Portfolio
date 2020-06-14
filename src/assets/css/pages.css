@@ -115,6 +115,11 @@ p{
       width: 240px;
    }
 
+   #skills{
+      margin-top: 32px;
+      margin-left: 16px;
+   }
+
    .skills-content{
       width: 64px;
       height: 64px;
