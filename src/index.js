@@ -1,14 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-snapshot';
 import {Helmet} from "react-helmet";
 
 import './assets/css/index.css';
 import App from './components/App.js';
 
-ReactDOM.render(
+render(
   <React.Fragment>
     <Helmet>
       <title>Renaldi Arlin</title>
+      <meta name="description" content="A website about Renaldi Arlin, his projects, and ways to reach him." />
 
       <meta prefix="og: http://ogp.me/ns#" name="title" content="Renaldi Arlin"/>
       <meta prefix="og: http://ogp.me/ns#" name="description" content="A website about Renaldi Arlin, his projects, and ways to reach him."/>
