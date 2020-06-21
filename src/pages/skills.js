@@ -1,7 +1,7 @@
 import React, {useRef} from 'react';
 import {useChain, useSpring, useTrail, animated} from 'react-spring'
 
-import items from '../components/SkillsList'
+import items from '../data/SkillsList'
 
 function Skills() {
   const trailRef = useRef()
@@ -22,15 +22,13 @@ function Skills() {
 
   return(
   <div className="container">
-    <div>
-      <animated.h1 style={fadeDown} className="title">My Skills</animated.h1>
-      <div id="skills">
-        {trail.map( (props, index) => (
-          <animated.div style={props} key={items[index]} className="skills-content">
-            {items[index]}
-          </animated.div>
-        ))}
-      </div>
+    <animated.h1 style={fadeDown} className="title">My Skills</animated.h1>
+    <div id="skills">
+      {trail.map( (props, index) => (
+        <animated.div style={props} key={items[index]} className="skills-content">
+          {items[index]}
+        </animated.div>
+      ))}
     </div>
   </div>)
 }

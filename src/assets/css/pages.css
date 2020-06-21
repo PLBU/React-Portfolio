@@ -29,9 +29,13 @@ p{
    margin-left: 85px;
    margin-right: 150px;
 }
-
+/* About Page */
 #about{
    display: flex;
+}
+
+.about-img {
+   width: 360px;
 }
 
 .content-left{
@@ -46,7 +50,7 @@ p{
    display: flex;
    align-items: center;
 }
-
+/*Skills Page */
 .skills-content{
    box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.1);
    border-radius: 10px;
@@ -75,9 +79,16 @@ p{
    width: 32px;
    height: 32px;
 }
+/*Projects Page*/
+#projects{
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+}
 
-.about-img {
-   width: 360px;
+.project-item{
+   width: 20vw;
+   height: 20vw;
 }
 
 /*Responsive design for mobile website*/
@@ -133,5 +144,10 @@ p{
 
    .skills-content p{
       font-size: x-small;
+   }
+
+   .project-item{
+      width: 160px;
+      height: 160px;
    }
 }

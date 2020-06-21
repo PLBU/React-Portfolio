@@ -6,28 +6,28 @@ import { FaPhp, FaAdobe } from 'react-icons/fa'
 
 const list = [
   <div>
-      <IconContext.Provider value={{ className: 'skills-icons', color: 'orangered' }}>
-         <DiHtml5 />
-      </IconContext.Provider>
-      <p>HTML</p>
+    <IconContext.Provider value={{ className: 'skills-icons', color: 'orangered' }}>
+        <DiHtml5 />
+    </IconContext.Provider>
+    <p>HTML</p>
   </div>,
   <div>
-      <IconContext.Provider value={{ className: 'skills-icons', color: 'dodgerblue' }}>
-         <DiCss3 />
-      </IconContext.Provider>
-      <p>CSS</p>
+    <IconContext.Provider value={{ className: 'skills-icons', color: 'dodgerblue' }}>
+        <DiCss3 />
+    </IconContext.Provider>
+    <p>CSS</p>
   </div>,
   <div>
-      <IconContext.Provider value={{ className: 'skills-icons', color: 'gold' }}>
-         <DiJsBadge />
-      </IconContext.Provider>
-      <p>JavaScript</p>
+    <IconContext.Provider value={{ className: 'skills-icons', color: 'gold' }}>
+        <DiJsBadge />
+    </IconContext.Provider>
+    <p>JavaScript</p>
   </div>,
   <div>
-      <IconContext.Provider value={{ className: 'skills-icons', color: `mediumpurple` }}>
-         <FaPhp />
-      </IconContext.Provider>
-      <p>php</p>
+    <IconContext.Provider value={{ className: 'skills-icons', color: `mediumpurple` }}>
+        <FaPhp />
+    </IconContext.Provider>
+    <p>php</p>
   </div>,
   <div>
     <IconContext.Provider value={{ className: 'skills-icons', color: `green` }}>

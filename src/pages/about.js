@@ -31,22 +31,20 @@ function About(){
 
   return(
   <div className="container">
-    <div>
-      <animated.h1 style={fadeDown} className="title">About me</animated.h1>
-      <div id="about">
-        <animated.div style={fade} className="content-left">
-          <img src={picabout} alt="" className="about-img"/>
-        </animated.div>
-        <animated.div style={fade2} className="content-right">
-          <p>
-            An enthusiast in iOS/Android/Web app development based in Bandung and Jakarta. 
-            Always seeking challenges that provide opportunities to maximize potential.
-            Recognized for persistence and inspiring willingness. Currently studying Informatics in Bandung
-            Institute of Technology. At present, holding a position in IEEE ITB Student Branch as the Back-end Developer.
-            Looking forward to collaborating with you!
-          </p>
-        </animated.div>
-      </div>
+    <animated.h1 style={fadeDown} className="title">About me</animated.h1>
+    <div id="about">
+      <animated.div style={fade} className="content-left">
+        <img src={picabout} alt="" className="about-img"/>
+      </animated.div>
+      <animated.div style={fade2} className="content-right">
+        <p>
+          An enthusiast in iOS/Android/Web app development based in Bandung and Jakarta. 
+          Always seeking challenges that provide opportunities to maximize potential.
+          Recognized for persistence and inspiring willingness. Currently studying Informatics in Bandung
+          Institute of Technology. At present, holding a position in IEEE ITB Student Branch as the Back-end Developer.
+          Looking forward to collaborating with you!
+        </p>
+      </animated.div>
     </div>
   </div>
   )
