@@ -35,7 +35,7 @@ function About(){
     <animated.h1 style={fadeDown} className="title">About me</animated.h1>
     <div id="about">
       <animated.div style={fade} className="content-left">
-        <LazyLoadImage src={picabout} alt="" className="about-img"/>
+        <LazyLoadImage effect="blur" src={picabout} alt="" className="about-img"/>
       </animated.div>
       <animated.div style={fade2} className="content-right">
         <p>
