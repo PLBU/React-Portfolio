@@ -1,5 +1,6 @@
 import React, {useRef} from 'react';
 import {useChain, useSpring, animated} from 'react-spring'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 import picabout from '../images/pic-about.png'
 
@@ -34,7 +35,7 @@ function About(){
     <animated.h1 style={fadeDown} className="title">About me</animated.h1>
     <div id="about">
       <animated.div style={fade} className="content-left">
-        <img src={picabout} alt="" className="about-img"/>
+        <LazyLoadImage src={picabout} alt="" className="about-img"/>
       </animated.div>
       <animated.div style={fade2} className="content-right">
         <p>
