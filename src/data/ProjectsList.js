@@ -7,10 +7,10 @@ import jaki from '../images/jaki-icon.png'
 export default [
    () =>
    <div>
-      <LazyLoadImage effect="blur" src={moneige} alt="" className="project-item"/>
+      <LazyLoadImage effect="blur" placeholderSrc={moneige} src={moneige} alt="" className="project-item"/>
    </div>,
    () =>
    <div>
-      <LazyLoadImage effect="blur" src={jaki} alt="" className="project-item"/>
+      <LazyLoadImage effect="blur" placeholderSrc={jaki} src={jaki} alt="" className="project-item"/>
    </div>
 ]
