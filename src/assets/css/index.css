@@ -8,8 +8,10 @@ body {
   font-family: ubuntu;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin-bottom: 200px;
+  margin-bottom: 200px !important;
   -webkit-overflow-scrolling: auto !important;
+  -webkit-background-size: auto;
+  background-size: auto;
 }
 
 * {    
