@@ -9,7 +9,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin-bottom: 200px;
-  overflow: visible;
   -webkit-overflow-scrolling: auto !important;
 }
 
