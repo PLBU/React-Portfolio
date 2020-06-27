@@ -152,10 +152,6 @@ h2 {
       font-size: 18px;
    }
 
-   p {
-      font-size: medium;
-   }
-
    .intro{
       font-size: 36px;
    }
@@ -167,6 +163,10 @@ h2 {
 
    #about{
       display: block;
+   }
+
+   #about p {
+      font-size: medium;
    }
 
    .about-img {

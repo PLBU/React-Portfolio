@@ -40,7 +40,7 @@ function About(){
       </animated.div>
       <animated.div style={fade2} className="content-right">
         <p>
-          An enthusiast in iOS/Android/Web app development based in Bandung and Jakarta. 
+          An enthusiast in Android and Web app development based in Bandung and Jakarta. 
           Always seeking challenges that provide opportunities to maximize potential.
           Recognized for persistence and inspiring willingness. Currently studying Informatics in Bandung
           Institute of Technology. At present, holding a position in IEEE ITB Student Branch as the Back-end Developer.

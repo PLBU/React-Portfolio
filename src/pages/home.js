@@ -32,7 +32,7 @@ function Home() {
     <div>
       <animated.h1 style={fadeDown} className="bigger">Hi!</animated.h1>
       <animated.h1 style={fadeDown2} className="intro bigger">I'm Renaldi Arlin</animated.h1>
-      <animated.h2 style={fade}>Junior iOS/ Android/ Web App Developer</animated.h2>
+      <animated.h2 style={fade}>Junior Android and Web App Developer</animated.h2>
     </div>
   </div>)
 }

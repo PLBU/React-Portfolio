@@ -22,7 +22,7 @@ export default [
          I believe other applications are too complex, therefore I created one that is straightforward using only one 
          button and one screen. All the app interfaces and logo are designed by me using Adobe XD. 
       </p>
-      <LazyLoadImage src={gplaybadge} className="gplaybadge"/>
+      <LazyLoadImage effect="blur" src={gplaybadge} className="gplaybadge"/>
    </div>,
    () =>
    <div className="project-card"> 
