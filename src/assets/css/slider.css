@@ -50,7 +50,13 @@
       top: 50px;  
    }
 
-   .btn-left, .btn-right{
+   .btn-left{
       bottom: 0;
+      left: 20vw;
+   }
+
+   .btn-right{
+      bottom: 0;
+      right: 20vw;
    }
 }

@@ -1,8 +1,6 @@
 import React from 'react'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 
-import moneigelow from '../images/low-size-moneige.png'
-import jakilow from '../images/low-size-jaki.png'
 import moneige from '../images/moneige-icon.png'
 import jaki from '../images/jaki-icon.png'
 import gplaybadge from '../images/google-play-badge.png'
@@ -11,7 +9,7 @@ export default [
    () =>
    <div className="project-card">
       <div className="project-title">
-         <LazyLoadImage effect="blur" placeholderSrc={moneigelow} src={moneige} alt="" className="project-icon"/>
+         <LazyLoadImage effect="blur" src={moneige} alt="" className="project-icon"/>
          <div>
             <h1>Moneige</h1>
             <h3>Sole Developer</h3>
@@ -27,7 +25,7 @@ export default [
    () =>
    <div className="project-card"> 
       <div className="project-title">
-         <LazyLoadImage effect="blur" placeholderSrc={jakilow} src={jaki} alt="" className="project-icon"/>
+         <LazyLoadImage effect="blur" src={jaki} alt="" className="project-icon"/>
          <div>
             <h1>JaKi</h1>
             <h3>Lead Android Developer</h3>
