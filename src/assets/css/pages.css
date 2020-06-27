@@ -3,9 +3,12 @@
    top: 0;
    left: 0;
    margin-left: 85px !important;
+   font-size: 72px;
+   font-weight: bolder;
+   margin: 5px 0;
 }
 
-h1 {
+.bigger {
    font-size: 72px;
    font-weight: bolder;
    margin: 5px 0;
@@ -14,12 +17,6 @@ h1 {
 h2 {
    color: grey;
    margin: 30px 0;
-}
-
-p{
-   font-size: large;
-   color: grey;
-   text-align: justify;
 }
 
 .container {
@@ -37,6 +34,12 @@ p{
 .about-img {
    height: 354px;
    width: 360px;
+}
+
+#about p{
+   font-size: large;
+   color: grey;
+   text-align: justify;
 }
 
 .content-left{
@@ -87,15 +90,62 @@ p{
    justify-content: center;
 }
 
-.project-item{
-   width: 20vw;
-   height: 20vw;
+.project-card{
+   border: rgba(211, 211, 211, 0.5) solid 0.5px;
+   box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.15);
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+}
+
+.project-title{
+   display: flex;
+   flex-direction: row;
+   align-items: center !important;
+}
+
+.project-icon{
+   margin: 12px;
+   width: 128px;
+   height: 128px;
+}
+
+.project-card h1 {
+   margin: 12px;
+   font-size: 32px !important;
+}
+
+.project-card h3{
+   margin: 12px;
+   color: grey;
+   font-size: 20px;
+   font-style: italic;
+}
+
+.project-card p{
+   margin: 12px;
+}
+
+.gplaybadge{
+   height: 63px;
+   width: 162px;
+   margin: 8px;
+}
+
+#projects p{
+   color: grey;
+   text-align: justify;
 }
 
 /*Responsive design for mobile website*/
 @media only screen and (max-width: 530px){
-   h1{
-      font-size: 40px;
+   .title{
+      font-size: 40px !important;
+      margin-left: 20px !important;
+   }
+
+   .bigger{
+      font-size: 40px !important;
    }
 
    h2 {
@@ -113,10 +163,6 @@ p{
    .container{
       margin-left: 20px;
       margin-right: 70px;
-   }
-
-   .title {
-      margin-left: 20px !important;
    }
 
    #about{
@@ -148,8 +194,23 @@ p{
       font-size: x-small;
    }
 
-   .project-item{
-      width: 160px;
-      height: 160px;
+   .project-icon{
+      width: 96px;
+      height: 96px;
+      margin: 8px;
+   }
+
+   #projects p{
+      font-size: small;
+   }
+
+   .project-card h1{
+      font-size: larger !important;
+      margin: 8px;
+   }
+
+   .project-card h3{
+      font-size: smaller;
+      margin: 8px;
    }
 }

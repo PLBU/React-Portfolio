@@ -1,13 +1,15 @@
 .slider {
    position: relative;
-   height: 20vw;
+   height: 50vh;
    width: 50vw;
    display: flex;
    justify-content: center;
    align-items: center;
+   /* border: solid red 1px; */
 }
 
 .slider-item {
+   width: 80%;
    position: absolute;
    top: 0;
    display: flex;
@@ -39,11 +41,16 @@
 
 @media only screen and (max-width: 530px){
    .slider{
-      height: 200px;
+      height: 480px;
       width: 256px;
    }
 
    .slider-item{
-      top: 20px;
+      width: 100%;
+      top: 50px;  
+   }
+
+   .btn-left, .btn-right{
+      bottom: 0;
    }
 }
