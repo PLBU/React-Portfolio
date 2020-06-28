@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {Transition, animated} from 'react-spring/renderprops'
+import { useDrag } from 'react-use-gesture'
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io'
 
 import '../assets/css/slider.css'
@@ -7,6 +8,7 @@ import '../assets/css/slider.css'
 function Slider(props){
    const [index, setIndex] = useState(0)
    const [right, setRight] = useState(true)
+   const [animating, setAnimating] = useState(false)
 
    const tranformFrom = (right) ? "translate3d(100%, 0 ,0) scale(0.5)" :  "translate3d(-100%, 0 ,0) scale(0.5)"
    const tranformLeave = (right) ? "translate3d(-50%, 0 ,0) scale(0.3)" :  "translate3d(50%, 0 ,0) scale(0.3)"
@@ -21,8 +23,24 @@ function Slider(props){
       setIndex((index + 1)%props.totalSlides)
    }
 
+   const bind = useDrag( ({movement: [mx]}) => {
+      if (animating) return
+      const moveX = (mx / window.innerHeight) * 100
+      const THRESHOLD = 12
+
+      if (moveX < -THRESHOLD) {
+         rightClick()
+         setAnimating(true)
+      } else if (moveX > THRESHOLD) {
+         leftClick()
+         setAnimating(true)
+      }
+
+      setTimeout( () => setAnimating(false), 1000)
+   })
+
    return (
-      <div className="slider">
+      <div className="slider unselectable" {...bind()}>
          <Transition
             native
             reset

@@ -137,6 +137,14 @@ h2 {
    text-align: justify;
 }
 
+.unselectable {
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -o-user-select: none;
+   user-select: none;
+}
+
 /*Responsive design for mobile website*/
 @media only screen and (max-width: 530px){
    .title{
