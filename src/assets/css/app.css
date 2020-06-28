@@ -45,6 +45,7 @@ footer {
 }
 
 .main{
+   overflow-x: hidden !important;
    background-color: white;
    position: relative;
    z-index: 0;
