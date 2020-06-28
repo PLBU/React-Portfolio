@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useRef} from 'react'
 import {useChain, useSpring, animated} from 'react-spring'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 
