@@ -147,6 +147,73 @@ h2 {
    user-select: none;
 }
 
+/* Contact page */
+#contact{
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+}
+
+input, textarea { font-family:inherit; }
+
+#contact label{
+   margin: 8px 0;
+   font-size: large;
+}
+
+#contact input{
+   border: rgba(211, 211, 211, 0.5) solid 0.5px;
+   box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.15);
+   border-radius: 10px;
+   width: 240px;
+   height: 24px;
+   margin-bottom: 8px;
+   padding: 8px;
+}
+
+#contact textarea{
+   border: rgba(211, 211, 211, 0.5) solid 0.5px;
+   box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.15);
+   border-radius: 10px;
+   width: 512px;
+   margin-bottom: 16px;
+   padding: 8px;
+   resize: none;
+}
+
+#contact input:hover, #contact textarea:hover{
+   border: rgba(80, 80, 80, 0.5) solid 1px;
+}
+
+#contact .submit{
+   height: 40px;
+   margin-top: 32px;
+   vertical-align: middle;
+   width: 530px;
+   text-align: center;
+   font-size: large;
+}
+
+#contact .submit:hover{
+   background-color: rgba(0, 0, 0, 0.85);
+   color: white;
+}
+
+.field{
+   display: flex;
+   flex-direction: column;
+}
+
+.profile{
+   display: flex;
+   flex-direction: row;
+}
+
+.half{
+   flex: 50%;
+   margin-right: 16px;
+}
+
 /*Responsive design for mobile website*/
 @media only screen and (max-width: 530px){
    .title{
@@ -221,5 +288,17 @@ h2 {
    .project-card h3{
       font-size: smaller;
       margin: 8px;
+   }
+
+   #contact input, #contact textarea{
+      width: 70vw;
+   }
+
+   #contact .submit{
+      width: calc(70vw + 18px)
+   }
+
+   .profile{
+      flex-direction: column;
    }
 }

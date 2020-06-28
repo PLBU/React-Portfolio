@@ -25,26 +25,21 @@ function Contact(){
     <div id="contact">
       <animated.div style={fade}>
         <form name="contact" method="POST">
-          <div className="field half first">
-            <label htmlFor="name">Name</label>
-            <input type="text" name="name" id="name" />
-          </div>
-          <div className="field half">
-            <label htmlFor="email">Email</label>
-            <input type="text" name="email" id="email" />
+          <div className="profile">
+            <div className="field half">
+              <label htmlFor="name">Name</label>
+              <input type="text" name="name" id="name"/>
+            </div>
+            <div className="field half">
+              <label htmlFor="email">Email</label>
+              <input type="text" name="email" id="email" />
+            </div>
           </div>
           <div className="field">
             <label htmlFor="message">Message</label>
-            <textarea name="message" id="message" rows="4"></textarea>
+            <textarea name="message" id="message" rows="7"></textarea>
           </div>
-          <ul className="actions">
-            <li>
-              <input type="submit" value="Send Message" className="special"/>
-            </li>
-            <li>
-              <input type="reset" value="Reset" />
-            </li>
-          </ul>
+          <input type="submit" value="Send" className="submit"/>
         </form>
       </animated.div>
     </div>
