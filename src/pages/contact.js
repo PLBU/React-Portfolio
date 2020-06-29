@@ -1,7 +1,25 @@
 import React, {useRef} from 'react';
-import {useChain, useSpring, animated} from 'react-spring'
+import {useChain, useSpring, useTrail, animated} from 'react-spring'
 
 function Contact(){
+  const items = [
+    <div className="profile">
+      <div className="field half first">
+        <label htmlFor="name">Name</label>
+        <input type="text" name="name" id="name" required/>
+      </div>
+      <div className="field half">
+        <label htmlFor="email">Email</label>
+        <input type="text" name="email" id="email" required/>
+      </div>
+    </div>,
+    <div className="field">
+      <label htmlFor="message">Message</label>
+      <textarea name="message" id="message" rows="7" required></textarea>
+    </div>,
+    <input type="submit" value="Send" className="submit"/>
+  ]
+
   const fadeDownRef = useRef()
   const fadeDown = useSpring({
     from: {opacity: 0, marginTop: -75},
@@ -9,39 +27,26 @@ function Contact(){
     ref: fadeDownRef
    })
 
-  const fadeRef = useRef()
-  const fade = useSpring({
-    from: {opacity: 0},
-    to: {opacity: 1},
-    config: {duration: 500},
-    ref: fadeRef
+  const trailRef = useRef()
+  const trail = useTrail(items.length, {
+    from: {opacity: 0, marginTop: -75},
+    to: {opacity: 1, marginTop: 0},
+    ref: trailRef
   })
 
-  useChain( [fadeDownRef, fadeRef] )
+  useChain( [fadeDownRef, trailRef] )
 
   return(
   <div className="container">
     <animated.h1 style={fadeDown} className="title">Contact me!</animated.h1>
     <div id="contact">
-      <animated.div style={fade}>
-        <form name="contact" method="POST">
-          <div className="profile">
-            <div className="field half">
-              <label htmlFor="name">Name</label>
-              <input type="text" name="name" id="name"/>
-            </div>
-            <div className="field half">
-              <label htmlFor="email">Email</label>
-              <input type="text" name="email" id="email" />
-            </div>
-          </div>
-          <div className="field">
-            <label htmlFor="message">Message</label>
-            <textarea name="message" id="message" rows="7"></textarea>
-          </div>
-          <input type="submit" value="Send" className="submit"/>
-        </form>
-      </animated.div>
+      <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+        {trail.map( (props, index) => (
+          <animated.div style={props} key={items[index]}>
+            {items[index]}
+          </animated.div>
+        ))}
+      </form>
     </div>
   </div>
   )
