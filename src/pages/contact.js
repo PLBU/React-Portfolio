@@ -2,8 +2,6 @@ import React, {useRef} from 'react';
 import {useChain, useSpring, useTrail, animated} from 'react-spring'
 
 function Contact(){
-  var validationText = ""
-
   const items = [
     <div className="profile">
       <div className="field half first">
@@ -36,32 +34,22 @@ function Contact(){
     ref: trailRef
   })
 
-  const validation = (e) => {
-    e.preventDefault()
-    
+  const validation = (e) => {    
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
     var message = document.getElementById("message").value;
 
     if (name.length < 4 || email.length < 10 || message.length < 10 || email.indexOf("@") === -1) {
-      validationText = "Please fill all the fields correctly."
+      alert("Please fill all the fields correctly.")
+      e.preventDefault()
+
       return false
     } else {
-      validationText = "Thank you, your message is successfully sent!"
+      alert("Thank you, your message is successfully sent!")
+      e.preventDefault()
+
       return true
     }
-  }
-
-  const formHandling = () => {
-    React.createElement(
-      <animated.div style={fadeDownRef} id="notif">
-        {validationText}
-      </animated.div>
-    )
-
-    setTimeout(() => {
-      console.log('nothing')
-    }, 1500);
   }
 
   useChain( [fadeDownRef, trailRef] )
@@ -71,7 +59,7 @@ function Contact(){
     <animated.h1 style={fadeDown} className="title">Contact me!</animated.h1>
     <div id="contact">
       <form name="contact" method="POST">
-        <input type="hidden" name="form-name" value="contact" onSubmit={validation} action={formHandling}/>
+        <input type="hidden" name="form-name" value="contact" onSubmit={validation}/>
         {trail.map( (props, index) => (
           <animated.div style={props} key={items[index]}>
             {items[index]}
