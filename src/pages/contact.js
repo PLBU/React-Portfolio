@@ -29,27 +29,31 @@ function Contact(){
 
   const trailRef = useRef()
   const trail = useTrail(items.length, {
-    from: {opacity: 0, marginTop: -75},
-    to: {opacity: 1, marginTop: 0},
+    from: {opacity: 0},
+    to: {opacity: 1},
     ref: trailRef
   })
 
-  const validation = (e) => {    
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var message = document.getElementById("message").value;
+  var testForm = document.querySelector("#contact form");
+      
+  testForm.addEventListener('submit', e => {
+    e.preventDefault();
 
-    if (name.length < 4 || email.length < 10 || message.length < 10 || email.indexOf("@") === -1) {
-      alert("Please fill all the fields correctly.")
-      e.preventDefault()
-
-      return false
-    } else {
-      alert("Thank you, your message is successfully sent!")
-
-      return true
-    }
-  }
+    const formData = new FormData(testForm);
+    fetch(testForm.getAttribute('action'), {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
+        'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+      },
+      body: new URLSearchParams(formData).toString()
+    })
+    .then(res => {
+      if (res) {
+        alert("Thank you, your message is sent!")
+      }
+    });
+  });
 
   useChain( [fadeDownRef, trailRef] )
 
@@ -57,7 +61,7 @@ function Contact(){
   <div className="container">
     <animated.h1 style={fadeDown} className="title">Contact me!</animated.h1>
     <div id="contact">
-      <form name="contact" method="POST" onSubmit={validation} action="">
+      <form name="contact" method="POST" action="/#contact">
         <input type="hidden" name="form-name" value="contact"/>
         {trail.map( (props, index) => (
           <animated.div style={props} key={items[index]}>
