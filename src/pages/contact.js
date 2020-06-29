@@ -1,9 +1,7 @@
-import React, {useRef, useState} from 'react';
+import React, {useRef} from 'react';
 import {useChain, useSpring, useTrail, animated} from 'react-spring'
 
 function Contact(){
-  const [time, setTime] = useState(Date.now() )
-
   var validationText = ""
 
   const items = [
@@ -47,11 +45,9 @@ function Contact(){
 
     if (name.length < 4 || email.length < 10 || message.length < 10 || email.indexOf("@") === -1) {
       validationText = "Please fill all the fields correctly."
-      setTime(Date.now() )
       return false
     } else {
       validationText = "Thank you, your message is successfully sent!"
-      setTime(Date.now() )
       return true
     }
   }
@@ -64,7 +60,7 @@ function Contact(){
     )
 
     setTimeout(() => {
-      document.getElementById('notif').remove('notif')
+      console.log('nothing')
     }, 1500);
   }
 
