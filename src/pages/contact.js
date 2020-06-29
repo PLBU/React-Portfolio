@@ -40,12 +40,7 @@ function Contact(){
   <div className="container">
     <animated.h1 style={fadeDown} className="title">Contact me!</animated.h1>
     <div id="contact">
-      <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-        <input type="text" name="name" />
-        <input type="email" name="email" />
-        <textarea name="message"></textarea>
-      </form>
-      <form name="contact" method="POST" data-netlify="true">
+      <form name="contact" method="POST">
         <input type="hidden" name="form-name" value="contact" />
         {trail.map( (props, index) => (
           <animated.div style={props} key={items[index]}>
