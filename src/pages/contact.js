@@ -46,7 +46,6 @@ function Contact(){
       return false
     } else {
       alert("Thank you, your message is successfully sent!")
-      e.preventDefault()
 
       return true
     }
