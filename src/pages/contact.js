@@ -12,11 +12,10 @@ function Contact(){
 
   useEffect(() => {
       window.addEventListener('scroll', handleScroll, { passive: true });
-      console.log(scrollPosition)
       return () => {
           window.removeEventListener('scroll', handleScroll);
       };
-  }, [scrollPosition]);
+  }, []);
 
   const items = [
     <div className="profile">

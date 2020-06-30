@@ -339,4 +339,12 @@ input, textarea { font-family:inherit; }
    .profile{
       flex-direction: column;
    }
+
+   .notif{
+      bottom: 16px;
+   }
+
+   .notif h2{
+      font-size: medium;
+   }
 }
