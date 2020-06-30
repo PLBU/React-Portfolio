@@ -93,7 +93,7 @@ export default class App extends Component{
                 </a>
               </div>
               <div className="footer-content">
-                &copyRenaldi Arlin 2020
+                &copy;Renaldi Arlin 2020
               </div>
             </div>
           </footer>
