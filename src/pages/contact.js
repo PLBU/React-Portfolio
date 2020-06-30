@@ -48,7 +48,7 @@ function Contact(){
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encodeURI({ "form-name": "contact"})
+        body: new URLSearchParams({ "form-name": "contact", ...this.state}).toString()
       })
         .then(() => alert("Thank you, your message is sent!"))
         .catch(error => alert(error))
