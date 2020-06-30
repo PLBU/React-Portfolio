@@ -3,12 +3,20 @@ import {useChain, useSpring, useTrail, animated} from 'react-spring'
 import {FaArrowDown} from 'react-icons/fa'
 
 function Contact(){
-  const [show, setShow] = useState(false)
+  const [scrollPosition, setSrollPosition] = useState(0);
+
+  const handleScroll = () => {
+      const position = window.pageYOffset;
+      setSrollPosition(position);
+  };
 
   useEffect(() => {
-    setTimeout( () => setShow(true), 2500)
-    setTimeout( () => setShow(false), 4000)
-  }, []);
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      console.log(scrollPosition)
+      return () => {
+          window.removeEventListener('scroll', handleScroll);
+      };
+  }, [scrollPosition]);
 
   const items = [
     <div className="profile">
@@ -42,10 +50,12 @@ function Contact(){
     ref: trailRef
   })
 
+  const notifRef = useRef()
   const notif = useSpring({
-    from: {},
-    to: {opacity: show ? 1 : 0,
-         transform: show ? "translate3d(0, 0, 0)" : "translate3d(0, -24%, 0)"}
+    from: {opacity: 0, transform: "translate3d(0, -24%, 0)"},
+    to: {opacity: (scrollPosition < 120) ? 1 : 0,
+         transform: (scrollPosition < 120) ? "translate3d(0, 0%, 0)" : "translate3d(0, -24%, 0)"},
+    ref: notifRef
   })
 
   const validation = (e) => {    
@@ -79,7 +89,7 @@ function Contact(){
     }
   } 
 
-  useChain( [fadeDownRef, trailRef] )
+  useChain( [fadeDownRef, trailRef, notifRef] )
 
   return(
   <div className="container">

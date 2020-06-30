@@ -26,7 +26,7 @@ function Slider(props){
    const bind = useDrag( ({movement: [mx]}) => {
       if (animating) return
       const moveX = (mx / window.innerHeight) * 100
-      const THRESHOLD = 12
+      const THRESHOLD = 10
 
       if (moveX < -THRESHOLD) {
          rightClick()
@@ -36,7 +36,7 @@ function Slider(props){
          setAnimating(true)
       }
 
-      setTimeout( () => setAnimating(false), 1000)
+      setTimeout( () => setAnimating(false), 800)
    })
 
    return (

@@ -14,11 +14,6 @@
    margin: 5px 0;
 }
 
-h2 {
-   color: grey;
-   margin: 30px 0;
-}
-
 .container {
    position: relative;
    overflow-x: hidden !important;
@@ -28,6 +23,19 @@ h2 {
    margin-left: 85px;
    margin-right: 100px;
 }
+
+/* Home Page */
+h2 {
+   color: grey;
+   margin: 30px 0;
+}
+
+.signature{
+   position: absolute;
+   right: 0;
+   z-index: -10;
+}
+
 /* About Page */
 #about{
    display: flex;
@@ -149,9 +157,10 @@ h2 {
 
 /* Contact page */
 #contact{
-   width: 100vw;
+   width: 100%;
    display: flex;
    justify-content: center;
+   position: absolute;
 }
 
 input, textarea { font-family:inherit; }
