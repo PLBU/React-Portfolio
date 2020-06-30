@@ -45,14 +45,16 @@ function Contact(){
 
       return false
     } else {
+      e.preventDefault()
+      
       fetch("/", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        headers: { 'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
+                    "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams({ "form-name": "contact", ...this.state}).toString()
       })
         .then(() => alert("Thank you, your message is sent!"))
         .catch(error => alert(error))
-        e.preventDefault()
     }
   } 
 
