@@ -12,7 +12,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin-bottom: 200px !important;
-  -webkit-overflow-scrolling: auto !important;
   -webkit-background-size: auto;
   background-size: auto;
   overflow-x: hidden !important;
@@ -20,4 +19,8 @@ body {
 
 * {    
   margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
 }

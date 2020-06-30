@@ -1,7 +1,15 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 import {useChain, useSpring, useTrail, animated} from 'react-spring'
+import {FaArrowDown} from 'react-icons/fa'
 
 function Contact(){
+  const [show, setShow] = useState(false)
+
+  useEffect(() => {
+    setTimeout( () => setShow(true), 2500)
+    setTimeout( () => setShow(false), 4000)
+  }, []);
+
   const items = [
     <div className="profile">
       <div className="field half first">
@@ -34,6 +42,12 @@ function Contact(){
     ref: trailRef
   })
 
+  const notif = useSpring({
+    from: {},
+    to: {opacity: show ? 1 : 0,
+         transform: show ? "translate3d(0, 0, 0)" : "translate3d(0, -24%, 0)"}
+  })
+
   const validation = (e) => {    
     let testForm = document.querySelector("#contact form");
     const formData = new FormData(testForm)
@@ -56,7 +70,11 @@ function Contact(){
                     "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData).toString()
       })
-        .then(() => alert("Thank you, your message is sent!"))
+        .then(() => {
+          document.getElementById("name").value = ""
+          document.getElementById("email").value = ""
+          document.getElementById("message").value = ""
+          alert("Thank you, your message is sent!") } )
         .catch(error => alert(error))
     }
   } 
@@ -76,6 +94,10 @@ function Contact(){
         ))}
       </form>
     </div>
+    <animated.div style={notif} className="notif">
+      <h2>Or through my social media</h2>
+      <FaArrowDown className="notif-icon"/>
+    </animated.div>
   </div>
   )
 }

@@ -26,7 +26,7 @@ h2 {
    height: 100vh;
    align-items: center;
    margin-left: 85px;
-   margin-right: 150px;
+   margin-right: 100px;
 }
 /* About Page */
 #about{
@@ -220,6 +220,27 @@ input, textarea { font-family:inherit; }
 
 .first{
    margin-right: 24px;
+}
+
+.notif{
+   position: absolute;
+   bottom: 32px;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   align-items: center;
+   text-align: center;
+}
+
+.notif h2{
+   margin-bottom: 8px;
+   font-size: large;
+}
+
+.notif-icon{
+   color: grey;
+   height: 24px;
+   width: 24px;
 }
 
 /*Responsive design for mobile website*/
