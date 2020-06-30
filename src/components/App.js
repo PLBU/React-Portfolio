@@ -1,12 +1,12 @@
-import React, {Component} from 'react';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import { Preloader, Puff } from 'react-preloader-icon';
+import React, {Component} from 'react'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import { Preloader, Puff } from 'react-preloader-icon'
 import { IconContext } from 'react-icons'
-import { FaLinkedin, FaInstagramSquare, FaGithubSquare } from "react-icons/fa";
+import { FaLinkedin, FaInstagramSquare, FaGithubSquare } from "react-icons/fa"
 
-import '../assets/css/app.css';
+import '../assets/css/app.css'
 
-import Nav from './Nav.js';
+import Nav from './Nav.js'
 
 import home from '../pages/home.js'
 import about from '../pages/about.js'
@@ -24,7 +24,7 @@ const PreloadingScreen = () => (
       duration={2000}
     />
   </div>
-);
+)
 
 export default class App extends Component{
     constructor(props) {
@@ -41,6 +41,13 @@ export default class App extends Component{
         loading: false
       })
     })
+
+    let viewheight = window.innerHeight
+    let viewwidth = window.innerWidth
+    if (viewwidth <= 1199) {
+      let viewport = document.querySelector("meta[name=viewport]")
+      viewport.setAttribute("content", "height=" + viewheight + "px, width=" + viewwidth + "px, initial-scale=1.0")
+    }
   }
 
   loaderTimeOut = () => {
@@ -86,7 +93,7 @@ export default class App extends Component{
                 </a>
               </div>
               <div className="footer-content">
-                &copy;Renaldi Arlin 2020
+                &copyRenaldi Arlin 2020
               </div>
             </div>
           </footer>
