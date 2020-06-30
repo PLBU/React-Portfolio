@@ -45,11 +45,16 @@ function Contact(){
 
       return false
     } else {
-      alert("Thank you, your message is successfully sent!")
-
-      return true
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encodeURI({ "form-name": "contact"})
+      })
+        .then(() => alert("Thank you, your message is sent!"))
+        .catch(error => alert(error))
+        e.preventDefault()
     }
-  }
+  } 
 
   useChain( [fadeDownRef, trailRef] )
 
@@ -68,6 +73,6 @@ function Contact(){
     </div>
   </div>
   )
-};
+}
 
 export default Contact;

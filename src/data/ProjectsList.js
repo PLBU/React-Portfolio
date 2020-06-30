@@ -11,7 +11,7 @@ export default [
    () =>
    <div className="project-card">
       <div className="project-title">
-         <LazyLoadImage effect="blur" placeHolderSrc={moneigelow} src={moneige} alt="" className="project-icon"/>
+         <LazyLoadImage effect="blur" placeholderSrc={moneigelow} src={moneige} alt="" className="project-icon"/>
          <div>
             <h1>Moneige</h1>
             <h3>Sole Developer</h3>
@@ -27,7 +27,7 @@ export default [
    () =>
    <div className="project-card"> 
       <div className="project-title">
-         <LazyLoadImage effect="blur" placeHolderSrc={jakilow} src={jaki} alt="" className="project-icon"/>
+         <LazyLoadImage effect="blur" placeholderSrc={jakilow} src={jaki} alt="" className="project-icon"/>
          <div>
             <h1>JaKi</h1>
             <h3>Lead Android Developer</h3>
