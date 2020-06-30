@@ -35,6 +35,9 @@ function Contact(){
   })
 
   const validation = (e) => {    
+    let testForm = document.querySelector("#contact form");
+    const formData = new FormData(testForm)
+
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
     var message = document.getElementById("message").value;
@@ -47,11 +50,11 @@ function Contact(){
     } else {
       e.preventDefault()
       
-      fetch("/", {
+      fetch(testForm.getAttribute('action'), {
         method: "POST",
         headers: { 'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
                     "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams({ "form-name": "contact", ...this.state}).toString()
+        body: new URLSearchParams(formData).toString()
       })
         .then(() => alert("Thank you, your message is sent!"))
         .catch(error => alert(error))
@@ -64,7 +67,7 @@ function Contact(){
   <div className="container">
     <animated.h1 style={fadeDown} className="title">Contact me!</animated.h1>
     <div id="contact">
-      <form name="contact" method="POST" onSubmit={validation} action="/contact">
+      <form name="contact" method="POST" onSubmit={validation} action="/#contact">
         <input type="hidden" name="form-name" value="contact"/>
         {trail.map( (props, index) => (
           <animated.div style={props} key={items[index]}>
