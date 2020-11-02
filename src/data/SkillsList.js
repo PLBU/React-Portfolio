@@ -2,7 +2,7 @@ import React from 'react';
 
 import { IconContext } from 'react-icons'
 import { DiHtml5, DiCss3, DiJsBadge, DiAndroid, DiPhotoshop, DiReact, DiMongodb, DiHaskell, DiNodejsSmall, DiPython, DiJava, DiCodeBadge, DiSqllite, DiGit } from 'react-icons/di'
-import { FaPhp, FaAdobe } from 'react-icons/fa'
+import { FaPhp, FaAdobe, FaFigma } from 'react-icons/fa'
 
 const list = [
   <div>
@@ -41,11 +41,17 @@ const list = [
     </IconContext.Provider>
     <p>Express.js</p>
   </div>,
-    <div>
+  <div>
     <IconContext.Provider value={{ className: 'skills-icons', color: `deepskyblue` }}>
       <DiReact />
     </IconContext.Provider>
     <p>React.js</p>
+  </div>,
+  <div>
+    <IconContext.Provider value={{ className: 'skills-icons', color: `deepskyblue` }}>
+      <DiReact />
+    </IconContext.Provider>
+    <p>React Native</p>
   </div>,
   <div>
     <IconContext.Provider value={{ className: 'skills-icons', color: `limegreen` }}>
@@ -81,7 +87,7 @@ const list = [
     <IconContext.Provider value={{ className: 'skills-icons'}}>
       <DiCodeBadge />
     </IconContext.Provider>
-    <p>C++</p>
+    <p>C/C++</p>
   </div>,
   <div>
     <IconContext.Provider value={{ className: 'skills-icons', color: 'royalblue' }}>
@@ -112,6 +118,12 @@ const list = [
       <DiPhotoshop />
     </IconContext.Provider>
     <p>Photoshop</p>
+  </div>,
+  <div>
+    <IconContext.Provider value={{ className: 'skills-icons', color: 'lightgreen' }}>
+      <FaFigma />
+    </IconContext.Provider>
+    <p>Figma</p>
   </div>,
 ]
 

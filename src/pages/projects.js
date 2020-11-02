@@ -26,7 +26,7 @@ function Projects(){
     <animated.h1 style={fadeDown} className="title">My Projects</animated.h1>
     <div id="projects">
       <animated.div style={fadeDown2}>
-        <Slider slides={items} totalSlides={2}/>
+        <Slider slides={items} totalSlides={3}/>
       </animated.div>
     </div>
   </div>)
