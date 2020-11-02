@@ -1,6 +1,6 @@
 # My React Portfolio Website
 ![Current Version](https://img.shields.io/badge/version-v1.1.0-blue)
-> This is my personal project, on the website, it contains information about my skill, projects, and ways to contact me
+> This is my personal project, on the website, it contains information about my skill, projects, and ways to contact me.
 > It is a Single Page App utilizing React Router, some components are made by myself, for instance, the Slider component
 
 ## Created by:
