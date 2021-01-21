@@ -1,8 +1,9 @@
 import React from 'react';
 
 import { IconContext } from 'react-icons'
-import { DiHtml5, DiCss3, DiJsBadge, DiAndroid, DiPhotoshop, DiReact, DiMongodb, DiHaskell, DiNodejsSmall, DiPython, DiJava, DiCodeBadge, DiSqllite, DiGit } from 'react-icons/di'
+import { DiDart, DiHtml5, DiCss3, DiJsBadge, DiAndroid, DiPhotoshop, DiReact, DiMongodb, DiNodejsSmall, DiPython, DiJava, DiCodeBadge, DiSqllite, DiGit } from 'react-icons/di'
 import { FaPhp, FaAdobe, FaFigma } from 'react-icons/fa'
+import { RiFlutterFill } from "react-icons/ri"
 
 const list = [
   <div>
@@ -36,10 +37,10 @@ const list = [
     <p>MongoDB</p>
   </div>,
   <div>
-    <IconContext.Provider value={{ className: 'skills-icons' }}>
-      <DiCodeBadge />
+    <IconContext.Provider value={{ className: 'skills-icons', color: 'dodgerblue'}}>
+      <DiDart />
     </IconContext.Provider>
-    <p>Express.js</p>
+    <p>Dart</p>
   </div>,
   <div>
     <IconContext.Provider value={{ className: 'skills-icons', color: `deepskyblue` }}>
@@ -96,10 +97,10 @@ const list = [
     <p>Python</p>
   </div>,
   <div>
-    <IconContext.Provider value={{ className: 'skills-icons', color: 'mediumpurple' }}>
-      <DiHaskell />
+    <IconContext.Provider value={{ className: 'skills-icons', color: 'dodgerblue' }}>
+      <RiFlutterFill />
     </IconContext.Provider>
-    <p>Haskell</p>
+    <p>Flutter</p>
   </div>,
   <div>
     <IconContext.Provider value={{ className: 'skills-icons', color: 'mediumspringgreen' }}>

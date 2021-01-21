@@ -17,7 +17,7 @@ export default [
          <LazyLoadImage effect="blur" placeholderSrc={akademislow} src={akademis} alt="" className="project-icon"/>
          <div>
             <h1>Akademis.id</h1>
-            <h3>Lead Mobile App Developer</h3>
+            <h3>Mobile App Developer</h3>
          </div>
       </div>
       <p>
@@ -34,15 +34,17 @@ export default [
          <LazyLoadImage effect="blur" placeholderSrc={jakilow} src={jaki} alt="" className="project-icon"/>
          <div>
             <h1>JaKi</h1>
-            <h3>Lead Android Developer</h3>
+            <h3>Mobile App Developer</h3>
          </div>
       </div>
       <p>
          JaKi is an Android based application that functions as the user's traffic safety assistant. 
          It is a platform for people to get the information of the dangerous traffic and report violations. 
-         All the app interfaces and logo are designed by my team. Latest feature added was autosuggest search bar for the maps function. 
-         This project is still ongoing.
+         The app mainly has 3 features: Auto-routing navigation, Report troublespot in vicinity, Education feature as 
+         Articles, Infographics, Videos, and Podcasts.
+         All the app interfaces and logo are designed by my team.
       </p>
+      <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.itbjaki" className="gplaybadge"><img alt='Get it on Google Play' src={gplaybadge}/></a>
    </div>,
    () =>
    <div className="project-card">
