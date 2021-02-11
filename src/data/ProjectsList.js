@@ -38,11 +38,11 @@ export default [
          </div>
       </div>
       <p>
-         JaKi is an Android based application that functions as the user's traffic safety assistant. 
+         JaKi is an Android application that is rewarded as The Most Cutting Edge Technology in Tanoto Students Research Award 2021 held by Tanoto Foundation. 
+         It mainly functions as personal traffic assistant for the user.
          It is a platform for people to get the information of the dangerous traffic and report violations. 
          The app mainly has 3 features: Auto-routing navigation, Report troublespot in vicinity, Education feature as 
          Articles, Infographics, Videos, and Podcasts.
-         All the app interfaces and logo are designed by my team.
       </p>
       <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.itbjaki" className="gplaybadge"><img alt='Get it on Google Play' src={gplaybadge}/></a>
    </div>,
