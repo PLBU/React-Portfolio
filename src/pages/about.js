@@ -42,8 +42,8 @@ function About(){
         <p>
           An enthusiast in Android and Web app development based in Bandung and Jakarta. 
           Always seeking challenges that provide opportunities to maximize potential.
-          Recognized for persistence and inspiring willingness. Currently studying Informatics in Bandung
-          Institute of Technology. At present, holding a position in IEEE ITB Student Branch as the Back-end Developer.
+          Recognized for persistence and inspiring willingness. Currently studying Informatics Engineering in Bandung
+          Institute of Technology. At present, working as a Freelance Software Developer.
           Looking forward to collaborating with you!
         </p>
       </animated.div>
